@@ -1,0 +1,16 @@
+name: typed_buffer
+description: Read and write typed data from binary buffer.
+version: 2.1.1
+homepage: https://github.com/tejainece/typed_buffer
+authors:
+- Ravi Teja Gudapati <tejaience@gmail.com>
+- James Ots <code@jamesots.com>
+
+environment:
+  sdk: '>=2.0.0-dev.68.0 <3.0.0'
+
+#dependencies:
+#  path: ^1.4.1
+
+dev_dependencies:
+  test: ^1.0.0
