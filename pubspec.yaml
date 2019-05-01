@@ -1,6 +1,6 @@
 name: typed_buffer
 description: Read and write typed data from binary buffer.
-version: 2.1.1
+version: 2.2.1
 homepage: https://github.com/tejainece/typed_buffer
 authors:
 - Ravi Teja Gudapati <tejaience@gmail.com>
