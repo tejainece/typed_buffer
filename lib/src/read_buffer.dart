@@ -7,7 +7,7 @@ class ReadBuffer {
 
   final Uint8List data;
 
-  ByteData _byteData;
+  late ByteData _byteData;
 
   /// Creates a [Buffer] of the given [size]
   ReadBuffer(int size) : data = Uint8List(size) {
@@ -83,7 +83,7 @@ class ReadBuffer {
   /// mysql docs.
   /// It will read up to nine bytes from the stream, depending on the first byte.
   /// Returns an unsigned integer.
-  int readLengthCodedBinary() {
+  int? readLengthCodedBinary() {
     int first = byte;
     if (first < 251) {
       return first;
@@ -111,8 +111,8 @@ class ReadBuffer {
   }
 
   /// Returns a length coded string, read from the buffer.
-  String readLengthCodedString() {
-    int length = readLengthCodedBinary();
+  String? readLengthCodedString() {
+    int? length = readLengthCodedBinary();
     if (length == null) return null;
     return string(length);
   }
