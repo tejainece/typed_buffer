@@ -13,7 +13,7 @@ import 'dart:typed_data';
 class FixedWriteBuffer {
   int _writePos = 0;
 
-  ByteData _data;
+  late ByteData _data;
 
   final Uint8List data;
 
